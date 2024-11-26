@@ -83,7 +83,7 @@ def count_each_number(folder):
         number_count.append(count)
     return(number_count)
 
-print(count_each_number("train_dir"))
+print(count_each_number("final_train_data"))
 # průměrný počet jednoho čísla je 250.2
 
 #############################################################################################################
