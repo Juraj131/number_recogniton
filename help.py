@@ -8,40 +8,40 @@ from matplotlib import pyplot as plt
 label_nums = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 
 # Function to load images from folder and return images and their labels
-def load_images_from_folder(folder, image_size=(28, 28)):
-    images = []
-    labels = []
+# def load_images_from_folder(folder, image_size=(28, 28)):
+#     images = []
+#     labels = []
     
-    for filename in os.listdir(folder):  # v os.listdir(folder) jsou názvy souborů v daném adresáři
-        img_path = os.path.join(folder, filename) # v img_path je cesta k danému souboru (např. "train_dir\\three_001.png")
+#     for filename in os.listdir(folder):  # v os.listdir(folder) jsou názvy souborů v daném adresáři
+#         img_path = os.path.join(folder, filename) # v img_path je cesta k danému souboru (např. "train_dir\\three_001.png")
         
-        # Find the label from the folder name based on the image filename
-        for label_num in label_nums:
-            if label_num in img_path:
-                label = label_nums.index(label_num)
-                break  # Once we find the label, no need to check further
+#         # Find the label from the folder name based on the image filename
+#         for label_num in label_nums:
+#             if label_num in img_path:
+#                 label = label_nums.index(label_num)
+#                 break  # Once we find the label, no need to check further
         
-        try:
-            # Read image using OpenCV (grayscale)
-            img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
-            if img is None:
-                raise ValueError(f"Image at {img_path} is invalid.")  # Handle case where the image doesn't load properly
+#         try:
+#             # Read image using OpenCV (grayscale)
+#             img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
+#             if img is None:
+#                 raise ValueError(f"Image at {img_path} is invalid.")  # Handle case where the image doesn't load properly
             
-            img_mirrored = mirrored(img)
-            img_rotated = rotated(img)
-            img_noisy = noisy(img)
-            # Normalize the image pixels by dividing by 255 <- nevím jestli tohle nebude dělat bordel potom u šumu
-            img = img / 255.0  # Pixel values in the range [0, 1]
+#             img_mirrored = mirrored(img)
+#             img_rotated = rotated(img)
+#             img_noisy = noisy(img)
+#             # Normalize the image pixels by dividing by 255 <- nevím jestli tohle nebude dělat bordel potom u šumu
+#             img = img / 255.0  # Pixel values in the range [0, 1]
 
-            img = cv2.resize(img, image_size)  # Resize image to 28x28
-            img = img.flatten()  # Flatten the image to a 1D vector
+#             img = cv2.resize(img, image_size)  # Resize image to 28x28
+#             img = img.flatten()  # Flatten the image to a 1D vector
             
-            images.append(img)
-            labels.append(label)  # Assign the label
-        except Exception as e:
-            print(f"Error loading image {filename}: {e}")
+#             images.append(img)
+#             labels.append(label)  # Assign the label
+#         except Exception as e:
+#             print(f"Error loading image {filename}: {e}")
 
-    return np.array(images), np.array(labels)
+#     return np.array(images), np.array(labels)
 
 # # Loading the datasets
 # X_train, y_train = load_images_from_folder("train_dir")
@@ -83,7 +83,7 @@ def count_each_number(folder):
         number_count.append(count)
     return(number_count)
 
-print(count_each_number("final_train_data"))
+print(count_each_number("train_dir"))  # [250, 250, 250, 250, 250, 250, 250, 250, 250, 250]
 # průměrný počet jednoho čísla je 250.2
 
 #############################################################################################################
