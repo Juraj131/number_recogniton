@@ -63,7 +63,7 @@ if __name__ == '__main__':
     )
 
     # Vytvorenie DataLoader
-    train_loader = DataLoader(train_dataset, batch_size=256, shuffle=True, num_workers=2, pin_memory=True)
+    train_loader = DataLoader(train_dataset, batch_size=256, shuffle=True, num_workers=4, pin_memory=True)
 
     # Hyperparameters
     input_size = 28 * 28  # 28x28 images flattened
@@ -112,7 +112,7 @@ if __name__ == '__main__':
         root=r'C:\Users\USER\Desktop\muj_tretak\UIM\OCR\final_val_data',
         transform=transform
     )
-    val_loader = DataLoader(val_dataset, batch_size=64, shuffle=False, num_workers=4, pin_memory=True)
+    val_loader = DataLoader(val_dataset, batch_size=64, shuffle=True, num_workers=4, pin_memory=True)
 
     val_acc = calculate_accuracy(val_loader, mymodel)
     print(f'Validation Accuracy: {val_acc:.2f}%')

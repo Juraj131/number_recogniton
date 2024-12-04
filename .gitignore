@@ -1,7 +1,8 @@
-
-eight_001.png
+five_128.png
 __pycache__/
-data_augmentation.py
 np_and_math.py
 ocr_env
-split_data.py
+architecture_cuda.py
+plot_script.py
+my_main.py
+trainDataOCR

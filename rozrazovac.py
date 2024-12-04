@@ -1,6 +1,9 @@
 import os
 import shutil
 
+"""
+    skript rozděluje čísla do složek podle jejich názvu, zároveň vyvtoří 10 složek 0-9, do kterých se čísla přesunou
+"""
 # Zdrojový priečinok s obrázkami
 source_dir = r'C:\Users\USER\Desktop\muj_tretak\UIM\OCR\val_dir'
 
