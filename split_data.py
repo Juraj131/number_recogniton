@@ -7,10 +7,10 @@ import os
 """
 # Tento file splitne obrazky do třech složek: train_dir, val_dir, test_dir s poměrem 80:10:10
 
-source_dir = r"C:\Users\USER\Desktop\muj_tretak\tranDataDigit\trainData"
-train_dir = r"C:\Users\USER\Desktop\muj_tretak\UIM\OCR\train_dir"
-val_dir = r"C:\Users\USER\Desktop\muj_tretak\UIM\OCR\val_dir"
-test_dir = r"C:\Users\USER\Desktop\muj_tretak\UIM\OCR\test_dir"
+source_dir = r"C:\\Users\\juraj\\OneDrive\\Documents\\UNI_BTB\\5.semester\\UIM\\final_projekt2\\number_recogniton\\trainData"
+train_dir = r"C:\\Users\\juraj\\OneDrive\\Documents\\UNI_BTB\\5.semester\\UIM\\final_projekt2\\number_recogniton\\train_dir"
+val_dir = r"C:\\Users\\juraj\\OneDrive\\Documents\\UNI_BTB\\5.semester\\UIM\\final_projekt2\\number_recogniton\\val_dir"
+test_dir = r"C:\\Users\\juraj\\OneDrive\\Documents\\UNI_BTB\\5.semester\\UIM\\final_projekt2\\number_recogniton\\test_dir"
 
 # Split the data into training, validation, and test sets
 

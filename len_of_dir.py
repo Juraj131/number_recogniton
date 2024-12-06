@@ -23,15 +23,15 @@ def count_each_number(folder):
         number_count.append(count)
     return(number_count)
 
-print(sum(count_each_number("train_dir")))
+print(sum(count_each_number(r"C:\\Users\\juraj\\OneDrive\\Documents\\UNI_BTB\\5.semester\\UIM\\final_projekt2\\number_recogniton\\train_dir")))
 
-#############################################################################################################
+#########################################################################################################
 ############################################# Vyobrazení mé geniality #######################################
 #############################################################################################################
 
 figure_2 = plt.figure(figsize=(10, 7))
 
-plt.bar(list(range(10)), count_each_number(r"train_dir"), edgecolor='black')
+plt.bar(list(range(10)), count_each_number(r"C:\\Users\\juraj\\OneDrive\\Documents\\UNI_BTB\\5.semester\\UIM\\final_projekt2\\number_recogniton\\train_dir"), edgecolor='black')
 
 # Add labels and title
 plt.xlabel('Čísla')

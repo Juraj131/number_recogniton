@@ -8,7 +8,7 @@ import time
 from matplotlib import pyplot as plt
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 
-device = "cpu"
+device = "cuda"
 print(f'Using device: {device}')
 
 
@@ -18,11 +18,12 @@ print(f'Using device: {device}')
 
 
 transform = transforms.Compose([
+    transforms.Grayscale(num_output_channels=1),
     transforms.Resize((28, 28)),  # Zmena veľkosti obrázkov na 28x28
     transforms.ToTensor(),        # Konverzia obrázkov na tenzory
     transforms.Normalize((0.5,), (0.5,)),  # Normalizácia obrázkov
-    transforms.Grayscale(num_output_channels=1)])  # Binarizácia: pixely > 0.5 → 1, inak → 0
-      # Prevod na čiernobiely obrázok
+    ])  # Binarizácia: pixely > 0.5 → 1, inak → 0
+
     
 # Vytvorenie datasetu pomocou ImageFolder
 train_dataset = datasets.ImageFolder(

@@ -5,10 +5,10 @@ import shutil
     skript rozděluje čísla do složek podle jejich názvu, zároveň vyvtoří 10 složek 0-9, do kterých se čísla přesunou
 """
 # Zdrojový priečinok s obrázkami
-source_dir = r'C:\Users\USER\Desktop\muj_tretak\UIM\OCR\val_dir'
+source_dir = r'C:\Users\juraj\OneDrive\Documents\UNI_BTB\5.semester\UIM\final_projekt2\number_recogniton\val_dir'
 
 # Cieľový priečinok, kde budú obrázky roztriedené do priečinkov 0 až 9
-target_dir = r'C:\Users\USER\Desktop\muj_tretak\UIM\OCR\final_val_data' # pre vytvorenie viac priecinkov staci ymenit adresu
+target_dir = r'C:\Users\juraj\OneDrive\Documents\UNI_BTB\5.semester\UIM\final_projekt2\number_recogniton\final_val_data' # pre vytvorenie viac priecinkov staci ymenit adresu
 
 # Mapovanie anglických názvov číslic na čísla
 digit_names = {
